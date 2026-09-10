@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Реклама у Мистера Полумарафона — Сергей Веснин</title>
-<meta name="description" content="Медиакит канала «Мистер Полумарафон». Аудитория, охваты, форматы и цены на рекламу. YouTube, Instagram, Strava, Telegram, Threads. Бег, здоровье, долголетие.">
+<meta name="description" content="Медиакит канала «Мистер Полумарафон». Аудитория, охваты, форматы и цены на рекламу. YouTube и Shorts, Instagram, Strava, Telegram, Threads. Бег, здоровье, долголетие.">
 <link rel="canonical" href="https://reklama.vesnins.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -161,7 +161,7 @@ p{margin:0 0 1em}
 }
 .ticker{
   border-top:1px solid var(--line-dark);margin-top:clamp(36px,5vw,64px);padding-top:22px;
-  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:18px;
 }
 .ticker__i{display:flex;flex-direction:column;gap:4px}
 .ticker__n{font-family:var(--mono);font-weight:700;font-size:clamp(20px,2.6vw,30px);color:#fff;font-variant-numeric:tabular-nums}
@@ -217,7 +217,7 @@ p{margin:0 0 1em}
   background:linear-gradient(to top,rgba(22,24,27,.94),rgba(22,24,27,0));
 }
 .band__q p{
-  max-width:24ch;margin:0 0 0 auto;font-family:var(--display);font-weight:700;
+  max-width:32ch;margin:0 0 0 auto;font-family:var(--display);font-weight:700;
   font-size:clamp(19px,2.9vw,36px);line-height:1.14;letter-spacing:-.02em;text-align:right;
 }
 .band__q span{color:var(--yellow)}
@@ -246,12 +246,39 @@ p{margin:0 0 1em}
   font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
 }
 .price__h::after{content:"";flex:1;height:1px;background:var(--ink)}
+.price__hint{
+  margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-size:13.5px;line-height:1.5;color:var(--muted);max-width:72ch;
+}
 .price__note{
   margin-top:8px;padding:22px 24px;border:1px dashed var(--line);
   font-size:14.5px;color:#3a3f45;
 }
 .price__note p{margin:0 0 .55em}
 .price__note p:last-child{margin:0}
+
+/* ─── откуда цифры ───────────────────────────────────────────── */
+.facts{margin-top:clamp(20px,2.6vw,32px);border:1px solid var(--line);background:#fff}
+.facts>summary{
+  cursor:pointer;list-style:none;padding:16px 20px;
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.facts>summary::-webkit-details-marker{display:none}
+.facts>summary::after{content:"+";font-family:var(--mono);font-size:17px;line-height:1;color:var(--orange);flex:none}
+.facts[open]>summary::after{content:"–"}
+.facts>summary span{color:var(--muted);letter-spacing:.06em;text-transform:none;font-size:11.5px}
+.facts__body{padding:0 20px 22px;border-top:1px solid var(--line)}
+.facts__grp{padding-top:20px}
+.facts__grp h3{font-family:var(--body);font-weight:600;font-size:15.5px;margin:0 0 3px}
+.facts__grp p{font-size:13.5px;line-height:1.5;color:var(--muted);margin:0 0 11px;max-width:70ch}
+.facts__links{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.facts__links a{
+  display:inline-block;font-family:var(--mono);font-size:12px;text-decoration:none;
+  border:1px solid var(--line);padding:6px 10px;color:#3a3f45;background:var(--paper);
+  font-variant-numeric:tabular-nums;transition:border-color .15s ease,color .15s ease;
+}
+.facts__links a:hover{border-color:var(--ink);color:var(--ink)}
 
 /* ─── шаги ───────────────────────────────────────────────────── */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.2vw,28px);counter-reset:s}
@@ -328,7 +355,7 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
     <div class="hero__grid">
       <div>
         <p class="hero__sub">
-          <b>Сергей Веснин.</b> Снимаю видео про бег, тренировки и здоровье
+          <b>Медиа про ЗОЖ:</b> видео и публикации про бег, тренировки и здоровье
           для взрослых людей, которые хотят жить дольше и лучше.
         </p>
         <div class="hero__cta">
@@ -349,10 +376,11 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
     </div>
 
     <div class="ticker">
-      <div class="ticker__i"><span class="ticker__n">29 078</span><span class="ticker__l">на пяти площадках</span></div>
+      <div class="ticker__i"><span class="ticker__n">29 000+</span><span class="ticker__l">человек на пяти площадках</span></div>
+      <div class="ticker__i"><span class="ticker__n">156 000</span><span class="ticker__l">просмотров на YouTube в месяц</span></div>
       <div class="ticker__i"><span class="ticker__n">93,2 %</span><span class="ticker__l">мужчины</span></div>
       <div class="ticker__i"><span class="ticker__n">69,9 %</span><span class="ticker__l">возраст 35–54</span></div>
-      <div class="ticker__i"><span class="ticker__n">от 200 €</span><span class="ticker__l">интеграция на YouTube</span></div>
+      <div class="ticker__i"><span class="ticker__n">от 200 €</span><span class="ticker__l">интеграция в ролик</span></div>
     </div>
   </div>
 </header>
@@ -363,7 +391,7 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
     <p class="eyebrow">Кто смотрит</p>
     <div class="aud">
       <div>
-        <h2>Аудитория небольшая, зато предельно понятная</h2>
+        <h2>Предельно понятная аудитория</h2>
         <p class="lead">
           Это не миллионный канал с рассеянной аудиторией, которая сама не знает,
           чего хочет. Здесь почти вся аудитория — мужчины 30–60 лет, которые
@@ -373,6 +401,8 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
         <div class="core-note">
           Ядро — <b>35–44 года</b>: 44,1 % всех просмотров. Вместе с соседними
           группами это <b>69,9 %</b> зрителей в возрасте 35–54.
+          И <b>80 %</b> просмотров дают постоянные зрители — те, кто возвращается на канал
+          сам, а не попал случайно из ленты.
         </div>
       </div>
 
@@ -413,7 +443,7 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
         <div class="chan__top"><span class="chan__name">YouTube</span><span class="chan__at">основная</span></div>
         <span class="chan__n">18 000</span>
         <span class="chan__u">подписчиков</span>
-        <p class="chan__d">1 500–4 500 просмотров на выпуск. Ролик живёт годами и продолжает приносить показы после публикации.</p>
+        <p class="chan__d">4 000–9 000 просмотров на выпуск, лучшие — до 169 000. Ролик живёт годами и продолжает приносить показы после публикации.</p>
       </a>
       <a class="chan__c" href="https://www.instagram.com/vesnin_sergey/" target="_blank" rel="noopener">
         <div class="chan__top"><span class="chan__name">Instagram</span><span class="chan__at">Reels</span></div>
@@ -423,7 +453,7 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
       </a>
       <a class="chan__c" href="https://t.me/vesninrun" target="_blank" rel="noopener">
         <div class="chan__top"><span class="chan__name">Telegram</span><span class="chan__at">канал</span></div>
-        <span class="chan__n">644</span>
+        <span class="chan__n">650</span>
         <span class="chan__u">подписчиков</span>
         <p class="chan__d">Небольшой, но самый лояльный сегмент. Подходит для промокодов, анонсов и прямых переходов на сайт.</p>
       </a>
@@ -435,7 +465,7 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
       </a>
       <a class="chan__c" href="https://www.threads.com/@vesnin_sergey" target="_blank" rel="noopener">
         <div class="chan__top"><span class="chan__name">Threads</span><span class="chan__at">лента</span></div>
-        <span class="chan__n">1 184</span>
+        <span class="chan__n">1 190</span>
         <span class="chan__u">подписчиков</span>
         <p class="chan__d">Короткие заметки и обсуждения. Охват раздаёт алгоритм, поэтому пост может выйти далеко за пределы подписчиков.</p>
       </a>
@@ -447,7 +477,7 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
 <div class="band">
   <img class="band__img" src="img/run.webp" width="1700" height="1208" alt="Сергей Веснин на дистанции" loading="lazy">
   <div class="band__q">
-    <p>Зритель приходит не за мотивацией.<br><span>Он приходит за тем, что работает.</span></p>
+    <p>Зритель приходит за <span>научными данными</span> про тренировки, советами по ЗОЖ и мотивацией.</p>
   </div>
 </div>
 
@@ -507,23 +537,54 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
         <span class="split__dots"></span><span class="split__val">200 €</span>
       </div>
       <div class="split">
-        <span class="split__key">Закреплённый комментарий<small>с активной ссылкой</small></span>
+        <span class="split__key">Закреплённый комментарий под роликом<small>с активной ссылкой</small></span>
         <span class="split__dots"></span><span class="split__val">20 €</span>
       </div>
       <div class="split">
         <span class="split__key">Пост в сообществе канала</span>
         <span class="split__dots"></span><span class="split__val">20 €</span>
       </div>
+      <div class="split split--core">
+        <span class="split__key">Бонус к интеграции<small>анонс в Telegram и Threads</small></span>
+        <span class="split__dots"></span><span class="split__val">бесплатно</span>
+      </div>
+    </div>
+
+    <div class="price__grp">
+      <div class="price__h"><span>YouTube · Shorts</span></div>
+      <div class="split">
+        <span class="split__key">Интеграция в Shorts<small>нативная, отдельный ролик</small></span>
+        <span class="split__dots"></span><span class="split__val">40 €</span>
+      </div>
+      <div class="split">
+        <span class="split__key">Упоминание в плановом Shorts<small>продукт в кадре, без сценария</small></span>
+        <span class="split__dots"></span><span class="split__val">25 €</span>
+      </div>
+      <div class="split">
+        <span class="split__key">Интеграция в ролик + Shorts-тизер<small>тизер со ссылкой на этот ролик</small></span>
+        <span class="split__dots"></span><span class="split__val">220 €</span>
+      </div>
+      <div class="split">
+        <span class="split__key">Пакет: 3 Shorts<small>в течение месяца</small></span>
+        <span class="split__dots"></span><span class="split__val">110 €</span>
+      </div>
+      <div class="split">
+        <span class="split__key">Пакет: Shorts + Instagram Reels<small>одна вертикалка на две площадки</small></span>
+        <span class="split__dots"></span><span class="split__val">70 €</span>
+      </div>
+      <p class="price__hint">
+        Охват Shorts — 2 800–5 300 просмотров, обычно около 4 000.
+      </p>
     </div>
 
     <div class="price__grp">
       <div class="price__h"><span>Telegram</span></div>
       <div class="split">
-        <span class="split__key">Рекламный пост<small>ваш текст и креатив</small></span>
+        <span class="split__key">Рекламный пост<small>ваш текст и креатив. Час в топе, дальше остаётся в канале навсегда — не удаляю</small></span>
         <span class="split__dots"></span><span class="split__val">7 €</span>
       </div>
       <div class="split">
-        <span class="split__key">Нативная интеграция<small>тестирую продукт и рассказываю своё мнение</small></span>
+        <span class="split__key">Нативная интеграция<small>тестирую продукт и рассказываю своё мнение. Остаётся навсегда</small></span>
         <span class="split__dots"></span><span class="split__val">10–20 €</span>
       </div>
       <div class="split">
@@ -534,6 +595,16 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
         <span class="split__key">Закрепление на 24 часа<small>к стоимости поста</small></span>
         <span class="split__dots"></span><span class="split__val">+50 %</span>
       </div>
+      <div class="split">
+        <span class="split__key">Закрепление на 7 дней<small>к стоимости поста</small></span>
+        <span class="split__dots"></span><span class="split__val">+100 %</span>
+      </div>
+      <p class="price__hint">
+        Один пост · около 140 просмотров за сутки · 240 за неделю · 290 через месяц.
+        Пост не удаляется и продолжает набирать просмотры примерно месяц после выхода —
+        больше половины охвата вы получаете уже после первых суток. Уведомления включены почти
+        у четверти подписчиков. Не больше одной рекламы в день.
+      </p>
     </div>
 
     <div class="price__grp">
@@ -593,6 +664,76 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
       <p>Кросс-платформенные пакеты и долгосрочное сотрудничество считаю индивидуально — напишите, что нужно.</p>
       <p>Вся реклама помечается как рекламная. Маркировку и отчётность обсуждаем при согласовании.</p>
     </div>
+    <details class="facts" open>
+      <summary>Откуда цифры <span>проверено 10 сентября 2026</span></summary>
+      <div class="facts__body">
+
+        <div class="facts__grp">
+          <h3>4 000–9 000 просмотров на выпуск</h3>
+          <p>Десять последних длинных роликов подряд, без отбора: с 27 августа по 8 сентября 2026. Обычный выпуск набирает около 7 000.</p>
+          <ul class="facts__links">
+            <li><a href="https://youtu.be/Q5eqfJQgVK0" target="_blank" rel="noopener">8 сент · 7 200</a></li>
+            <li><a href="https://youtu.be/QKXjCM8Tu4M" target="_blank" rel="noopener">6 сент · 7 700</a></li>
+            <li><a href="https://youtu.be/JcbdRnEMLsk" target="_blank" rel="noopener">4 сент · 4 250</a></li>
+            <li><a href="https://youtu.be/OQ4xxLdxWec" target="_blank" rel="noopener">3 сент · 8 750</a></li>
+            <li><a href="https://youtu.be/eahu0Kqf17I" target="_blank" rel="noopener">2 сент · 4 700</a></li>
+            <li><a href="https://youtu.be/xBsI712hTXU" target="_blank" rel="noopener">1 сент · 7 000</a></li>
+            <li><a href="https://youtu.be/L53gYdob1F4" target="_blank" rel="noopener">30 авг · 8 400</a></li>
+            <li><a href="https://youtu.be/riLgpOWoXnI" target="_blank" rel="noopener">29 авг · 6 300</a></li>
+            <li><a href="https://youtu.be/ONRqHQs89gI" target="_blank" rel="noopener">28 авг · 17 050</a></li>
+            <li><a href="https://youtu.be/jUIOVuH6qKE" target="_blank" rel="noopener">27 авг · 6 900</a></li>
+          </ul>
+        </div>
+
+        <div class="facts__grp">
+          <h3>Лучшие выпуски — до 169 000</h3>
+          <p>Это верхний результат, а не норма: такие ролики выходят редко и набирают просмотры годами.</p>
+          <ul class="facts__links">
+            <li><a href="https://youtu.be/tMUAKUQioGw" target="_blank" rel="noopener">169 000</a></li>
+            <li><a href="https://youtu.be/_dPC2Zct68Y" target="_blank" rel="noopener">92 500</a></li>
+            <li><a href="https://youtu.be/lxW_Z5WbjRU" target="_blank" rel="noopener">52 200</a></li>
+            <li><a href="https://youtu.be/FBgGNLmnwKI" target="_blank" rel="noopener">51 300</a></li>
+            <li><a href="https://youtu.be/zQmMt4pjFnw" target="_blank" rel="noopener">44 000</a></li>
+          </ul>
+        </div>
+
+        <div class="facts__grp">
+          <h3>Shorts — 2 800–5 300 просмотров</h3>
+          <p>Двенадцать последних Shorts подряд, без отбора. Обычный набирает около 4 000, отдельные уходят заметно выше.</p>
+          <ul class="facts__links">
+            <li><a href="https://youtube.com/shorts/_nno0pjUDSs" target="_blank" rel="noopener">2 800</a></li>
+            <li><a href="https://youtube.com/shorts/yDAgW0RaEt4" target="_blank" rel="noopener">4 000</a></li>
+            <li><a href="https://youtube.com/shorts/D0e8hy11wAY" target="_blank" rel="noopener">3 600</a></li>
+            <li><a href="https://youtube.com/shorts/kwnHW5Jggwk" target="_blank" rel="noopener">2 770</a></li>
+            <li><a href="https://youtube.com/shorts/UCOiQUpvui0" target="_blank" rel="noopener">4 050</a></li>
+            <li><a href="https://youtube.com/shorts/07R78Eox0h8" target="_blank" rel="noopener">5 300</a></li>
+            <li><a href="https://youtube.com/shorts/A2UIL6asnDw" target="_blank" rel="noopener">4 450</a></li>
+            <li><a href="https://youtube.com/shorts/TKNQH-Z41DA" target="_blank" rel="noopener">3 550</a></li>
+            <li><a href="https://youtube.com/shorts/Fe0OPJadQ04" target="_blank" rel="noopener">4 150</a></li>
+            <li><a href="https://youtube.com/shorts/NcnbKOgUYHc" target="_blank" rel="noopener">7 650</a></li>
+            <li><a href="https://youtube.com/shorts/WiEYosD0n7c" target="_blank" rel="noopener">4 750</a></li>
+            <li><a href="https://youtube.com/shorts/qQapQ3m2yAo" target="_blank" rel="noopener">29 350</a></li>
+          </ul>
+        </div>
+
+        <div class="facts__grp">
+          <h3>156 000 просмотров в месяц, 80 % — постоянные зрители</h3>
+          <p>YouTube Analytics, отчёт «Новые и постоянные зрители», период 13 августа — 9 сентября 2026. За 28 дней канал набрал 156 020 просмотров, из них 125 260 пришлись на зрителей, которые уже смотрели канал раньше.</p>
+        </div>
+
+        <div class="facts__grp">
+          <h3>Telegram: пост работает месяц и остаётся навсегда</h3>
+          <p>Четыре обычные записи канала разного возраста. Счётчик просмотров Telegram показывает публично — откройте и проверьте сами. Трёхмесячная запись на месте: посты не удаляются.</p>
+          <ul class="facts__links">
+            <li><a href="https://t.me/vesninrun/1364" target="_blank" rel="noopener">сутки · 138</a></li>
+            <li><a href="https://t.me/vesninrun/1351" target="_blank" rel="noopener">неделя · 237</a></li>
+            <li><a href="https://t.me/vesninrun/1286" target="_blank" rel="noopener">месяц · 290</a></li>
+            <li><a href="https://t.me/vesninrun/1055" target="_blank" rel="noopener">3 месяца · 293</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </details>
   </div>
 </section>
 
@@ -605,7 +746,7 @@ footer{background:var(--asphalt);color:#6d7278;border-top:1px solid var(--line-d
       <div class="step"><span class="step__n">01</span><h3>Заявка</h3><p>Пишете в Telegram: продукт, формат, желаемые даты.</p></div>
       <div class="step"><span class="step__n">02</span><h3>Согласование</h3><p>Фиксируем формат, дату выхода и стоимость. При необходимости — договор.</p></div>
       <div class="step"><span class="step__n">03</span><h3>Съёмка</h3><p>Готовлю интеграцию и присылаю сценарий или черновик на согласование.</p></div>
-      <div class="step"><span class="step__n">04</span><h3>Выход и отчёт</h3><p>Публикация, затем скриншоты статистики через неделю после выхода.</p></div>
+      <div class="step"><span class="step__n">04</span><h3>Выход и отчёт</h3><p>Публикация, затем скриншоты статистики через неделю после выхода. Рекламный пост в Telegram ставлю в утреннее окно — там максимум просмотров за день.</p></div>
     </div>
   </div>
 </section>
